@@ -1,13 +1,24 @@
 [project]
+name= 'life_expectancy'
+version= '0.1.0'
 readme = "README.md"
 requires-python = ">=3.8"
 description = "First assignment of the Foundations Learning Path"
 authors = [
-    {name = "Fernando Cordeiro<fernando@daredata.engineering>"}
+    {name = "Fernando Cordeiro<fernando@daredata.engineering>"},
+    {name = "João Capitão<joao-capitao>"}
 ]
 
+[build-system]
+requires= ["setuptools>=61.0"]
+build-backend= "setuptools.build_meta"
+
+
+[tool.setuptools] 
+packages= ["life_expectancy"] #Very important. So I can use 'pip' for example.
+
 [project.optional-dependencies]
-dev = ["pytest", "pylint", "pytest-cov", "toml"]
+dev = ["pytest", "pylint", "pytest-cov", "toml", "pandas"]
 
 [tool.coverage.run]
 omit = [
